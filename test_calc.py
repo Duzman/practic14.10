@@ -26,5 +26,15 @@ class CalcTest(unittest.TestCase):
         """Негативный, возведение в степень"""
         self.assertEqual(calc_me(4, 2,"^"), 'ERROR: Uknow operation')
 
+    def test_divm_neg(self):
+        """Негативный, деление на ноль негативного числа"""
+        self.assertEqual(calc_me(-5, 0,"/"), 'ERROR: Divide by zero!')
+
+    def test_operm_neg(self):
+        """Негативный, возведение в степень"""
+        self.assertEqual(calc_me(-7, 2,"^"), 'ERROR: Uknow operation')
+
+    
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
